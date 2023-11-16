@@ -1,24 +1,119 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_7" orientation="landscape" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Delm-Medium.otf">
+            <string>Delm-Medium</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="InstaGrid" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="926" height="428"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Instagrid" translatesAutoresizingMaskIntoConstraints="NO" id="LHV-3y-TcD">
+                                <rect key="frame" x="423" y="6" width="80" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="Qvr-W5-qo0">
+                                        <variation key="heightClass=compact" constant="24"/>
+                                    </constraint>
+                                    <constraint firstAttribute="width" secondItem="LHV-3y-TcD" secondAttribute="height" multiplier="120:36" id="iBH-FL-m5s"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="BoL-l4-QQX">
+                                <rect key="frame" x="59" y="42" width="808" height="370"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleAspectFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="9YQ-nt-mzW">
+                                        <rect key="frame" x="318" y="0.0" width="172.33333333333337" height="49"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Arrow Up" translatesAutoresizingMaskIntoConstraints="NO" id="bDr-bx-pIu">
+                                                <rect key="frame" x="76" y="0.0" width="20" height="20"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="bDr-bx-pIu" secondAttribute="height" multiplier="1:1" id="ljK-ai-6N9"/>
+                                                    <constraint firstAttribute="width" constant="20" id="rLT-2e-7uD"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Swipe up to share" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9wg-xD-jyj">
+                                                <rect key="frame" x="0.0" y="29" width="172.33333333333334" height="20"/>
+                                                <fontDescription key="fontDescription" name="Delm-Medium" family="Delm" pointSize="28"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="cgm-at-R5j">
+                                        <rect key="frame" x="63.666666666666686" y="73" width="681" height="297"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ol3-I3-rAf" customClass="LayoutView" customModule="InstaGrid" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="297" height="297"/>
+                                                <color key="backgroundColor" red="0.18431372549019609" green="0.39215683940000001" blue="0.58039215686274503" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="ol3-I3-rAf" secondAttribute="height" multiplier="1:1" id="MEI-tq-9td"/>
+                                                    <constraint firstAttribute="width" secondItem="ol3-I3-rAf" secondAttribute="height" multiplier="1:1" id="zfm-KZ-7kv"/>
+                                                </constraints>
+                                            </view>
+                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mMa-tl-kSy">
+                                                <rect key="frame" x="337" y="108.66666666666663" width="344" height="80"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="mMa-tl-kSy" secondAttribute="height" multiplier="43:10" id="BN6-Tp-LAi"/>
+                                                    <constraint firstAttribute="height" constant="80" id="Qi9-v9-HVX"/>
+                                                </constraints>
+                                            </stackView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="ol3-I3-rAf" firstAttribute="leading" secondItem="cgm-at-R5j" secondAttribute="leading" constant="20" id="Rlk-mK-Uv4">
+                                                <variation key="heightClass=compact" constant="0.0"/>
+                                            </constraint>
+                                            <constraint firstAttribute="trailing" secondItem="mMa-tl-kSy" secondAttribute="trailing" constant="22" id="h7a-yr-R4h">
+                                                <variation key="heightClass=compact" constant="0.0"/>
+                                            </constraint>
+                                        </constraints>
+                                        <variation key="heightClass=compact" axis="horizontal"/>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.74117648599999997" green="0.8392156959" blue="0.89019608500000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="LHV-3y-TcD" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="LEx-Tr-y4l">
+                                <variation key="heightClass=compact" constant="6"/>
+                            </constraint>
+                            <constraint firstItem="BoL-l4-QQX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="LXK-TX-wPH"/>
+                            <constraint firstItem="LHV-3y-TcD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="N9X-zc-DeW"/>
+                            <constraint firstAttribute="bottom" secondItem="BoL-l4-QQX" secondAttribute="bottom" constant="40" id="YVn-XU-pdh">
+                                <variation key="heightClass=compact" constant="16"/>
+                            </constraint>
+                            <constraint firstItem="BoL-l4-QQX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="fYw-27-Qxo">
+                                <variation key="heightClass=compact" constant="12"/>
+                            </constraint>
+                            <constraint firstItem="BoL-l4-QQX" firstAttribute="top" secondItem="LHV-3y-TcD" secondAttribute="bottom" constant="48" id="jQi-Ac-t6T">
+                                <variation key="heightClass=compact" constant="12"/>
+                            </constraint>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="BoL-l4-QQX" secondAttribute="trailing" id="v30-Hq-1qo">
+                                <variation key="heightClass=compact" constant="12"/>
+                            </constraint>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="128.98550724637681" y="-35.491071428571423"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Arrow Up" width="4.6666665077209473" height="3.3333332538604736"/>
+        <image name="Instagrid" width="41.333332061767578" height="13"/>
+    </resources>
 </document>

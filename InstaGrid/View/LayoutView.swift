@@ -9,12 +9,27 @@ import UIKit
 
 class LayoutView: UIView {
 
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
-    }
-    */
+    @IBOutlet private var images : [LayoutImageView]!
 
+    var layout: LayoutType = .twoUp {
+        didSet {
+
+        }
+    }
+
+    private func didChangeLayout(layout: LayoutType) {
+        switch layout {
+        case .square :
+            break
+        case .twoUp :
+            break
+        case .twoDown :
+            break
+        }
+    }
+
+}
+
+enum LayoutType {
+    case twoUp, twoDown, square
 }

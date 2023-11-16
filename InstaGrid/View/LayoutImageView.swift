@@ -9,12 +9,13 @@ import UIKit
 
 class LayoutImageView: UIView {
 
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
-    }
-    */
+    // Will display image or " + " icon
+    @IBOutlet private var image: UIImageView!
 
+    private var imageWidth: Int = 138 {
+        didSet {
+            frame = CGRect(x: frame.origin.x, y: frame.origin.y, width: 
+                            CGFloat(integerLiteral: imageWidth), height: frame.height)
+        }
+    }
 }
