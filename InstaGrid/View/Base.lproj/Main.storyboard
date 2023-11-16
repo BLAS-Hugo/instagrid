@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_7" orientation="landscape" appearance="light"/>
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -17,11 +17,11 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="InstaGrid" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="926" height="428"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Instagrid" translatesAutoresizingMaskIntoConstraints="NO" id="LHV-3y-TcD">
-                                <rect key="frame" x="423" y="6" width="80" height="24"/>
+                                <rect key="frame" x="147" y="30" width="120" height="36"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="36" id="Qvr-W5-qo0">
                                         <variation key="heightClass=compact" constant="24"/>
@@ -30,10 +30,10 @@
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="BoL-l4-QQX">
-                                <rect key="frame" x="59" y="42" width="808" height="370"/>
+                                <rect key="frame" x="0.0" y="114" width="414" height="582"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleAspectFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="9YQ-nt-mzW">
-                                        <rect key="frame" x="318" y="0.0" width="172.33333333333337" height="49"/>
+                                        <rect key="frame" x="121" y="0.0" width="172.33333333333337" height="49"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Arrow Up" translatesAutoresizingMaskIntoConstraints="NO" id="bDr-bx-pIu">
                                                 <rect key="frame" x="76" y="0.0" width="20" height="20"/>
@@ -52,10 +52,10 @@
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="cgm-at-R5j">
-                                        <rect key="frame" x="63.666666666666686" y="73" width="681" height="297"/>
+                                        <rect key="frame" x="20" y="73" width="374" height="509"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ol3-I3-rAf" customClass="LayoutView" customModule="InstaGrid" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="297" height="297"/>
+                                                <rect key="frame" x="20" y="0.0" width="334" height="334"/>
                                                 <color key="backgroundColor" red="0.18431372549019609" green="0.39215683940000001" blue="0.58039215686274503" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="ol3-I3-rAf" secondAttribute="height" multiplier="1:1" id="MEI-tq-9td"/>
@@ -63,11 +63,10 @@
                                                 </constraints>
                                             </view>
                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mMa-tl-kSy">
-                                                <rect key="frame" x="337" y="108.66666666666663" width="344" height="80"/>
+                                                <rect key="frame" x="22" y="432.66666666666663" width="330" height="76.333333333333314"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" secondItem="mMa-tl-kSy" secondAttribute="height" multiplier="43:10" id="BN6-Tp-LAi"/>
-                                                    <constraint firstAttribute="height" constant="80" id="Qi9-v9-HVX"/>
+                                                    <constraint firstAttribute="width" secondItem="mMa-tl-kSy" secondAttribute="height" multiplier="173:40" id="OdO-VB-JSN"/>
                                                 </constraints>
                                             </stackView>
                                         </subviews>
@@ -82,6 +81,10 @@
                                         <variation key="heightClass=compact" axis="horizontal"/>
                                     </stackView>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="cgm-at-R5j" secondAttribute="trailing" constant="20" id="NDA-m8-Air"/>
+                                    <constraint firstItem="cgm-at-R5j" firstAttribute="leading" secondItem="BoL-l4-QQX" secondAttribute="leading" constant="20" id="h3l-Cd-opb"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
