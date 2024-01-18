@@ -9,7 +9,16 @@ import UIKit
 
 class LayoutView: UIView {
 
-    @IBOutlet private var images : [LayoutImageView]!
+    required init?(coder aDecoder: NSCoder) {
+            super.init(coder: aDecoder)
+        }
+
+    init() {
+        super.init(frame: CGRect())
+        for layout in LayoutType.allCases {
+            self.addSubview(LayoutButton(with: layout))
+        }
+    }
 
     var layout: LayoutType = .twoUp {
         didSet {
@@ -30,6 +39,6 @@ class LayoutView: UIView {
 
 }
 
-enum LayoutType {
+enum LayoutType: CaseIterable {
     case twoUp, twoDown, square
 }
