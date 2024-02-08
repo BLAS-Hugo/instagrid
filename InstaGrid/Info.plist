@@ -2,6 +2,16 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>6.0</string>
+	<key>CFBundleExecutable</key>
+	<string></string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>We use this permission to enable you to select a photo in your library</string>
+	<key>NSAppleMusicUsageDescription</key>
+	<string>We use this permission to enable you to select a photo in your library</string>
+	<key>NSCameraUsageDescription</key>
+	<string>We use this to take a save your final result</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>Delm-Medium.otf</string>
