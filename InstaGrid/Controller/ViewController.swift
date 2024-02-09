@@ -99,11 +99,11 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate & UINavi
 
     // Opens the Share bottom sheet with the screenshotted view
     private func onSwipe() {
-        var imagesToShare = [Data]()
-        imagesToShare.append(screenshot()!.pngData()!)
+        var imagesToShare = [UIImage]()
+        imagesToShare.append(screenshot()!)
 
         let activityViewController = UIActivityViewController(
-            activityItems: imagesToShare as [Data],
+            activityItems: imagesToShare as [UIImage],
             applicationActivities: nil)
         activityViewController.popoverPresentationController?.sourceView = self.view
         activityViewController.completionWithItemsHandler = { _, _, _, _ in
