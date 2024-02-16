@@ -69,10 +69,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate & UINavi
         gestureRecognizer!.numberOfTouchesRequired = 1
         gestureRecognizer!.direction = .up
         view.addGestureRecognizer(gestureRecognizer!)
-        /*let leftSwipeGesture = UISwipeGestureRecognizer(target: self, action: #selector(didSwipeLeft))
-        leftSwipeGesture.numberOfTouchesRequired = 1
-        leftSwipeGesture.direction = .left
-        view.addGestureRecognizer(leftSwipeGesture)*/
     }
 
     @objc private func didSwipeUp() {
